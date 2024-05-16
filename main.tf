@@ -22,8 +22,8 @@ data "azurerm_resource_group" "this" {
 
 resource "azurerm_storage_account" "example" {
   name                     = "examplestoraccount"
-  resource_group_name      = azurerm_resource_group.this.name
-  location                 = azurerm_resource_group.this.location
+  resource_group_name      = data.azurerm_resource_group.this.name
+  location                 = data.azurerm_resource_group.this.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
