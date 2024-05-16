@@ -17,7 +17,7 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "this" {
-  name = "1-643de2ec-playground-sandbox"
+  name = var.resource_group_name
 }
 
 
